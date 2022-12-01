@@ -1,11 +1,18 @@
 package org.example.models;
 
+import org.example.logic.Day1;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ElfInventory {
-    private List<Integer> calories = new ArrayList<>();
+    private List<Integer> calories;
     private Integer sum;
+
+    public ElfInventory() {
+        this.calories = new ArrayList<>();
+        this.sum=0;
+    }
 
     public List<Integer> getCalories() {
         return this.calories;

@@ -10,13 +10,13 @@ public class MigrationUtil {
     public static List<ElfInventory> migrateFromListIntoDTO(List<String> caloriesList) {
         List<ElfInventory> elfInventoryList = new ArrayList<>();
 
-        for (String calorie : caloriesList) {
-            ElfInventory elf = new ElfInventory();
+        ElfInventory elf = new ElfInventory();
 
-            if (calorie.equals("\n")) {
+        for (String calorie : caloriesList) {
+            if (calorie.equals("\n") || calorie.equals("")) {
                 elf.setSum(null);
                 elfInventoryList.add(elf);
-                elf.clearCalories();
+                elf = new ElfInventory();
             } else {
                 elf.addCalorie(Integer.valueOf(calorie));
             }
