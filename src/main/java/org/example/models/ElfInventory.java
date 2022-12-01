@@ -4,6 +4,7 @@ import java.util.List;
 
 public class ElfInventory {
     private List<Integer> calories;
+    private Integer sum;
 
     public List<Integer> getCalories() {
         return this.calories;
@@ -21,7 +22,19 @@ public class ElfInventory {
         this.calories.clear();
     }
 
-    public Integer findSummation() {
+    public Integer getSum() {
+        return this.sum;
+    }
+
+    public void setSum(Integer sum) {
+        if (sum==null) {
+            this.sum = calculateSum();
+        } else {
+            this.sum=sum;
+        }
+    }
+
+    public Integer calculateSum() {
         Integer sum = 0;
         for (Integer calorie : calories) {
             sum+=calorie;

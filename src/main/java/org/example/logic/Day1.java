@@ -17,6 +17,10 @@ public class Day1 {
             } else {
                 List<ElfInventory> elfInventoryList = MigrationUtil.migrateFromListIntoDTO(list);
 
+                for (ElfInventory elfInventory : elfInventoryList) {
+
+                }
+
             }
         } catch (Exception e) {
             e.printStackTrace();

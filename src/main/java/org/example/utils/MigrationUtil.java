@@ -14,6 +14,7 @@ public class MigrationUtil {
             ElfInventory elf = new ElfInventory();
 
             if (calorie.equals("\n")) {
+                elf.setSum(null);
                 elfInventoryList.add(elf);
                 elf.clearCalories();
             } else {
