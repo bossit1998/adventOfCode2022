@@ -1,9 +1,10 @@
 package org.example.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ElfInventory {
-    private List<Integer> calories;
+    private List<Integer> calories = new ArrayList<>();
     private Integer sum;
 
     public List<Integer> getCalories() {
